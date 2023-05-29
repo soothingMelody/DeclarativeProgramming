@@ -1,0 +1,46 @@
+Zadanie 1. Należy zdefiniować predykaty poziomy oraz pionowy dla złożonej struktury danych o nazwie odcinek reprezentowanej przez drzewo:
+
+%     odcinek
+%      /   \ 
+%     /     \ 
+%   punkt punkt
+%   / \     / \ 
+%  /   \   /   \
+% X1   Y1 X2   Y2
+_________________________
+Proszę przeanalizować wyniki następujących zapytań:
+?- pionowy(odcinek(punkt(2,1),punkt(X,7))).
+?- pionowy(odcinek(punkt(3,2),R)).
+?- poziomy(odcinek(punkt(2,2),punkt(8,Y))).
+?- poziomy(odcinek(K,punkt(6,5))).
+
+Zadanie 2. Należy zdefiniować predykat regularny dla złożonej struktury danych o nazwie prostokąt reprezentowanej przez drzewo:
+
+%           prostokąt
+%         / |      |\  
+%        /  |      | \
+%       /   |      |  \
+%      /    |      |   \
+%     /     |      |    \
+%    /      |      |     \
+%  punkt  punkt  punkt  punkt
+%   /\     /\     /\     /\
+%  /  \   /  \   /  \   /  \
+% X1  Y1 X2  Y2 X3  Y3 X4  Y4
+_____________________________________
+Predykat powyższy ma być spełniony, gdy boki prostokąta są równoległe do osi układu współrzędnych.
+
+W celu uniknięcia niejednoznaczności co do obranej reprezentacji, proszę przyjąć następującą interpretację graficzną kolejności ułożenia punktów w prostokącie:
+
+X4, Y2		X3,Y3
+X1, Y1		X2, Y2
+
+
+Uwaga! Proszę nie korzystać w rozwiązaniu z definicji predykatu 'odcinek' z poprzedniego zadania.
+
+Proszę przeanalizować wyniki następujących zapytań:
+?- regularny(prostokąt(punkt(2,1),punkt(7,1),punkt(7,4),punkt(2,4))).
+?- regularny(prostokąt(punkt(2,2),punkt(4,2),punkt(4,4),punkt(2,4))).
+?- regularny(prostokąt(punkt(2,2),punkt(4,2),punkt(4,4),punkt(3,4))).
+?- regularny(prostokąt(punkt(4,5),punkt(17,18),punkt(14,21),punkt(1,8))).
+?- regularny(prostokąt(punkt(2,Y),punkt(X,1),punkt(7,4),R)).

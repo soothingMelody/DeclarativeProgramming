@@ -1,0 +1,45 @@
+Treść zadania:
+Krok 1.  Należy zdefiniować w postaci faktów dane opisujące schemat relacji rodzinnych:
+
+%            Maria-Piotr        Adam-Ewa
+%            -----------        --------
+%              /  |  \          /  |  \
+%             /   |   \        /   |   \
+%            /  Marek  \      /  Joanna \
+% Robert-Agata         Jan-Anna         Krzysztof-Agnieszka
+% ------------         --------         -------------------
+%     /  \               /  \                   /  \
+%    /    \             /    \                 /    \
+%   /      \           /      \               /      \
+% Radek   Beata      Darek   Tomek         Jacek    Iwona
+
+Do opisu dziedziny tych relacji należy wykorzystać następujące predykaty:
+kobieta(<imię>), mężczyzna(<imię>) oraz rodzic(<imię_rodzica>,<imię_dziecka>),
+gdzie parametr <imię> lub <imię_xxxxx> należy zastąpić imieniem konkretnej osoby ze schematu (bez nawiasów).
+Liczba faktów do zdefiniowania: 8 faktów kobieta, 10 faktów mężczyzna oraz 24 fakty rodzic.
+
+Krok 2.  Do powyższego opisu dziedziny należ dodać predykaty binarne definiujące następujące relacje pokrewieństwa:
+
+matka(<imię>,<imię_dziecka>),
+ojciec(<imię>,<imię_dziecka>),
+siostra(<imię_siostry>,<imię>),
+brat(<imię_brata>,<imię>),
+babcia(<imię_babci>,<imię>),
+dziadek(<imię_dziadka>,<imię>),
+wuj(<imię_wujka>,<imię>),
+stryj(<imię_stryjka>,<imię>),
+kuzyn(<imię_kuzyna>,<imię>).
+
+Relacje powyższe mają być zdefiniowane za pomocą reguł, a nie faktów.
+Uwaga! Relację kuzyn należy zdefiniować jedną regułą bez dysjunkcji ;-)
+Podobnie relacja pomocnicza rodzeństwo - jeśli będzie definiowana, to jedna reguła bez dysjunkcji.
+
+Podpowiedź: Stryj to brat ojca, zaś wuj to brat matki ;-)
+
+Krok 3.  Należy rozszerzyć nasz świat związków rodzinnych o relacje powinowactwa. W tym celu najpierw trzeba dodać do zbioru predykatów
+pięć faktów, definiujących relację binarną małżeństwo(<imię>,<imię>) o takiej kolejności parametrów jaka jest na schemacie powyżej.
+Następnie, dysponując takimi faktami,  możemy zdefiniować dwie następujące binarne relacje powinowactwa za pomocą reguł (nie faktów!):
+teściowa(<imię_teściowej>,<imię>),
+szwagier(<imię_szwagra>,<imię>).
+
+Podpowiedź: Teściowa, to matka żony (nie męża!). Szwagier zaś to brat żony lub mąż siostry ;-)
